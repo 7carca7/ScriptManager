@@ -2,29 +2,16 @@
 
 import os
 import timeit
-import datetime
+import logging
 
 scripts_folder = os.path.join(os.getcwd(), "Scripts", "")
 
 
-def timestamp_log():
-    "Crea un archivo txt con el timestamp actual"
+def setup_logging():
+    "Define la configuración del sistema de registro"
 
-    hora_actual = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    directorio = os.getcwd()
-    ruta_archivo = os.path.join(directorio, "log.txt")
-
-    contenido_anterior = ""
-    contenido_nuevo = f"{hora_actual} - EJECUTADO EN {execution_time:.2f} SEGUNDOS.\n"
-
-    if os.path.exists(ruta_archivo):
-        with open(ruta_archivo, 'r', encoding="utf-8") as archivo:
-            contenido_anterior = archivo.read()
-
-    contenido_total = contenido_nuevo + contenido_anterior
-
-    with open(ruta_archivo, 'w', encoding="utf-8") as archivo:
-        archivo.write(contenido_total)
+    logging.basicConfig(filename="reg.log", level=logging.INFO,
+                        format="%(asctime)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
 
 
 def get_python_scripts():
@@ -55,6 +42,10 @@ def run_scripts():
     print(f"COMPLETADO {count - 1}/{SCRIPTS_NUM}")
 
 
+setup_logging()
+
 execution_time = timeit.timeit(run_scripts, number=1)
-print(f"DURACIÓN {execution_time:.2f} SEGUNDOS")
-timestamp_log()
+formated_time = f"{execution_time:.2f}"
+
+logging.info("TIEMPO(S)= %s", formated_time)
+print("TIEMPO(S)=", formated_time)
