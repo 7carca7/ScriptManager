@@ -6,7 +6,7 @@ commands = [
     "brew update",
     "brew upgrade",
     "brew autoremove",
-    "brew cleanup"
+    "brew cleanup --prune=0 -s"
 ]
 
 for cmd in commands:
