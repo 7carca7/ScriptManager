@@ -1,4 +1,4 @@
-"Script que ejecutarán todos los comandos de brew"
+"Script que ejecutará comandos de brew"
 
 import os
 
@@ -6,7 +6,7 @@ commands = [
     "brew update",
     "brew upgrade",
     "brew autoremove",
-    "brew cleanup --prune=0 -s"
+    "brew cleanup"
 ]
 
 for cmd in commands:
