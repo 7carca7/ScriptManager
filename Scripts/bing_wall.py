@@ -1,6 +1,5 @@
 "Script que descarga la imagen del día de Bing"
 
-from datetime import date
 import json
 import http.client
 import urllib.request
@@ -17,12 +16,11 @@ image_url = data["url"]
 image_desc = data["copyright"]
 descrip_limpia = image_desc.split(',')[0].split('(')[0]
 
-nombre_archivo = str(date.today())+".jpg"
+nombre_archivo = descrip_limpia + ".jpg"
 ruta_guardado = "/Users/ernesto/Pictures/bing wallpaper/" + nombre_archivo
 
-urllib.request.urlretrieve(image_url, ruta_guardado)
-
 if os.path.exists(ruta_guardado):
-    print(f'Imagen descargada correctamente: "{descrip_limpia}"')
-else:
-    print("Error al descargar la imagen")
+    print(f'La imagen ya existe: "{descrip_limpia}"')
+elif not os.path.exists(ruta_guardado):
+    urllib.request.urlretrieve(image_url, ruta_guardado)
+    print(f'Imagen descargada correctamente: " {descrip_limpia}"')
