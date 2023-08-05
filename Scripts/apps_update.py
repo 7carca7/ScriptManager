@@ -1,4 +1,4 @@
-"Script que ejecutará comandos de brew"
+"Script que buscará e instalará actualizaciones de apps y del systema"
 
 import os
 
@@ -6,7 +6,12 @@ commands = [
     "brew update",
     "brew upgrade",
     "brew autoremove",
-    "brew cleanup"
+    "brew cleanup",
+    "mas upgrade",
+    "softwareupdate -ia --verbose",
+    "sudo purge",
+    "rm -rf ~/Library/Logs/*",
+    "rm -rf /private/var/log/*",
 ]
 
 for cmd in commands:
