@@ -9,9 +9,7 @@ commands = [
     "brew cleanup",
     "mas upgrade",
     "softwareupdate -ia --verbose",
-    "sudo purge",
-    "rm -rf ~/Library/Logs/*",
-    "rm -rf /private/var/log/*",
+
 ]
 
 for cmd in commands:
