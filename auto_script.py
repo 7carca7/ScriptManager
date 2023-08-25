@@ -4,7 +4,7 @@ import os
 import timeit
 import logging
 
-scripts_folder = os.path.join(os.getcwd(), "Scripts", "")
+SCRIPTS_FOLDER = "Scripts/"
 
 
 def setup_logging():
@@ -19,14 +19,14 @@ def get_python_scripts():
 
     python_scripts = []
 
-    for filename in os.listdir(scripts_folder):
+    for filename in os.listdir(SCRIPTS_FOLDER):
         if filename.endswith(".py"):
             python_scripts.append(filename)
     return python_scripts
 
 
 scripts_to_run = get_python_scripts()
-SCRIPTS_NUM = len(get_python_scripts())
+SCRIPTS_NUM = len(scripts_to_run)
 
 
 def run_scripts():
@@ -36,7 +36,7 @@ def run_scripts():
 
     for script in scripts_to_run:
         print(f"EJECUTANDO {count}/{SCRIPTS_NUM} {script.upper()}")
-        os.system(f"python3 {scripts_folder}{script}")
+        os.system(f"python3 {SCRIPTS_FOLDER}{script}")
         count += 1
 
     print(f"COMPLETADO {count - 1}/{SCRIPTS_NUM}")
