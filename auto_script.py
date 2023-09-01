@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+
 "Lanzador de scripts"
 
 import os
