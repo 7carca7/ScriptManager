@@ -11,7 +11,8 @@ def setup_logging():
     "Define la configuración del sistema de registro"
 
     logging.basicConfig(filename="reg.log", level=logging.INFO,
-                        format="%(asctime)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+                        format="%(asctime)s - %(message)s",
+                        datefmt="%Y-%m-%d %H:%M:%S")
 
 
 def get_python_scripts():
