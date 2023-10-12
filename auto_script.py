@@ -1,4 +1,4 @@
-"""Lanzador de scripts"""
+"Lanzador de scripts"
 
 import os
 import timeit
