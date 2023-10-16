@@ -1,4 +1,4 @@
-"""Lanzador de scripts"""
+"""Script Launcher"""
 
 import os
 import timeit
@@ -8,7 +8,7 @@ SCRIPTS_FOLDER = "Scripts/"
 
 
 def setup_logging():
-    """Define la configuración del sistema de registro"""
+    """Defines registration system configuration"""
 
     logging.basicConfig(filename="reg.log", level=logging.INFO,
                         format="%(asctime)s - %(message)s",
@@ -16,7 +16,7 @@ def setup_logging():
 
 
 def get_python_scripts():
-    """Obtiene todos los archivos.py dentro del directorio Scripts"""
+    """Get all the.py files inside the Scripts folder"""
 
     python_scripts = []
 
@@ -31,7 +31,7 @@ SCRIPTS_NUM = len(scripts_to_run)
 
 
 def run_scripts():
-    """Ejecuta todos los archivos.py dentro del directorio Scripts"""
+    """Execute all the .py files inside the Scripts folder"""
 
     count = 1
 
