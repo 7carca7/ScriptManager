@@ -1,4 +1,4 @@
-"""Script Launcher"""
+"""Scripts Launcher"""
 
 import os
 import timeit
@@ -36,11 +36,11 @@ def run_scripts():
     count = 1
 
     for script in scripts_to_run:
-        print(f"EJECUTANDO {count}/{SCRIPTS_NUM} {script.upper()}")
+        print(f"RUNNING {count}/{SCRIPTS_NUM} {script.upper()}")
         os.system(f"python3 {SCRIPTS_FOLDER}{script}")
         count += 1
 
-    print(f"COMPLETADO {count - 1}/{SCRIPTS_NUM}")
+    print(f"COMPLETED {count - 1}/{SCRIPTS_NUM}")
 
 
 setup_logging()
@@ -48,5 +48,5 @@ setup_logging()
 execution_time = timeit.timeit(run_scripts, number=1)
 formatted_time = f"{execution_time:.2f}"
 
-logging.info("TIEMPO(S)= %s", formatted_time)
-print("TIEMPO(S)=", formatted_time)
+logging.info("TIME(S)= %s", formatted_time)
+print("TIME(S)=", formatted_time)
