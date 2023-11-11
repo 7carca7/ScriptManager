@@ -3,12 +3,12 @@
 import os
 
 commands = [
-    #"brew update",
-    #"brew upgrade",
-    #"brew autoremove",
-    #"brew cleanup",
-    #"mas upgrade",
-    "softwareupdate -ia --verbose",
+    # "brew update",
+    # "brew upgrade",
+    # "brew autoremove",
+    # "brew cleanup",
+    # "mas upgrade",
+    # "softwareupdate -ia --verbose",
 
 ]
 

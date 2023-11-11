@@ -20,7 +20,7 @@ descrip_limpia = image_desc.split(',')[0].split('(')[0]
 
 nombre_archivo = re.sub(CARACTERES_NO_VALIDOS, '-', descrip_limpia)
 nombre_archivo = nombre_archivo + ".jpg"
-ruta_guardado = "/Users/ernesto/Pictures/bing wallpaper/" + nombre_archivo
+ruta_guardado = "C:/Users/ea_ca/iCloudDrive/Bing Wallpaper/" + nombre_archivo
 
 if os.path.exists(ruta_guardado):
     print(f'La imagen ya existe: "{descrip_limpia}"')
