@@ -1,2 +1,2 @@
 # ScriptManager
-Un lanzador de scripts simple que ejecuta todos los scripts de un directorio
+A simple script launcher that runs all scripts in a directory.
